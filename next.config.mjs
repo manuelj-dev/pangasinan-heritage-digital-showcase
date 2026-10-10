@@ -10,6 +10,9 @@ const nextConfig = {
   basePath: repoName,
   assetPrefix: repoName ? `${repoName}/` : undefined,
   trailingSlash: true,         // /page/index.html plays nicely with GitHub Pages
+  env: {
+    NEXT_PUBLIC_BASE_PATH: repoName,
+  },
   images: {
     unoptimized: true,         // GH Pages has no image-optimization server
   },
