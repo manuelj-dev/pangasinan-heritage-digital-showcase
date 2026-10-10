@@ -3,7 +3,7 @@
 **Student Name:** Jayvee Serra Manuel
 **Selected Framework:** React / Next.js 14 (App Router) — see `report/Framework-Selection-Report.pdf`
 
-**Live Website:** _(fill in your GitHub Pages URL after deploying, e.g. `https://<username>.github.io/pangasinan-heritage-digital-showcase/`)_
+**Live Website:** https://manuelj-dev.github.io/pangasinan-heritage-digital-showcase/
 
 A Static-Site-Generated (SSG) digital showcase for the Pangasinan Provincial Tourism
 Office, covering Hundred Islands (Alaminos), Cape Bolinao Lighthouse (Bolinao), and
