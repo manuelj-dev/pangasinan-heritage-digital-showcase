@@ -1,6 +1,7 @@
 import { Heading, Text } from "@/components/atoms/Typography";
 import Button from "@/components/atoms/Button";
 import Icon from "@/components/atoms/Icon";
+import Reveal from "@/components/atoms/Reveal";
 import HeritageGrid from "@/components/organisms/HeritageGrid";
 import { heritageSites } from "@/data/heritage-sites";
 
@@ -16,17 +17,20 @@ export default function Home() {
       {/* Hero */}
       <section id="hero" className="mx-auto max-w-6xl px-4 pb-12 pt-10 md:px-6 md:pb-20 md:pt-16">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="font-body text-sm font-semibold text-heritage-600">
+          <p className="animate-fade-up font-body text-sm font-semibold text-heritage-600">
             Pangasinan Provincial Tourism Office
           </p>
-          <Heading level={1} className="mt-2">
+          <Heading level={1} className="animate-fade-up mt-2" style={{ animationDelay: "60ms" }}>
             Pangasinan Heritage Digital Showcase
           </Heading>
-          <Text size="lg" muted className="mt-4">
+          <Text size="lg" muted className="animate-fade-up mt-4" style={{ animationDelay: "140ms" }}>
             A guide to the province&apos;s most iconic sites — built to load fast on
             any connection, work well on a phone, and stay easy to update.
           </Text>
-          <div className="mt-6 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-center">
+          <div
+            className="animate-fade-up mt-6 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-center"
+            style={{ animationDelay: "220ms" }}
+          >
             <Button href="#heritage-sites" className="w-full sm:w-auto">
               Explore heritage sites
             </Button>
@@ -36,7 +40,10 @@ export default function Home() {
           </div>
         </div>
 
-        <dl className="mx-auto mt-12 grid max-w-2xl grid-cols-3 gap-4 text-center">
+        <dl
+          className="animate-fade-up mx-auto mt-12 grid max-w-2xl grid-cols-3 gap-4 text-center"
+          style={{ animationDelay: "300ms" }}
+        >
           {stats.map((stat) => (
             <div key={stat.label}>
               <dt className="sr-only">{stat.label}</dt>
@@ -52,7 +59,7 @@ export default function Home() {
       {/* About */}
       <section id="about" className="scroll-mt-20 border-t border-black/5 bg-white">
         <div className="mx-auto grid max-w-6xl gap-8 px-4 py-14 md:grid-cols-[1.1fr_1fr] md:gap-12 md:px-6 md:py-20">
-          <div>
+          <Reveal>
             <p className="font-body text-sm font-semibold text-heritage-600">About</p>
             <Heading level={2} id="about-heading" className="mt-2">
               A province shaped by coastline and hills
@@ -69,10 +76,10 @@ export default function Home() {
               entry links out to a fuller description, and the list will grow as
               more sites are documented.
             </Text>
-          </div>
+          </Reveal>
 
           <ul className="space-y-4">
-            <li className="flex gap-3 rounded-2xl bg-sand-50 p-4">
+            <Reveal as="li" delay={100} className="flex gap-3 rounded-2xl bg-sand-50 p-4">
               <Icon name="map-pin" className="mt-1 shrink-0 text-heritage-600" />
               <div>
                 <p className="font-semibold text-ink-900">4 towns represented</p>
@@ -81,8 +88,8 @@ export default function Home() {
                   foothills.
                 </Text>
               </div>
-            </li>
-            <li className="flex gap-3 rounded-2xl bg-sand-50 p-4">
+            </Reveal>
+            <Reveal as="li" delay={220} className="flex gap-3 rounded-2xl bg-sand-50 p-4">
               <Icon name="map-pin" className="mt-1 shrink-0 text-heritage-600" />
               <div>
                 <p className="font-semibold text-ink-900">Natural &amp; built heritage</p>
@@ -91,7 +98,7 @@ export default function Home() {
                   spring landscapes.
                 </Text>
               </div>
-            </li>
+            </Reveal>
           </ul>
         </div>
       </section>
@@ -99,12 +106,12 @@ export default function Home() {
       {/* Heritage sites */}
       <section className="border-t border-black/5">
         <div className="mx-auto max-w-6xl px-4 py-14 md:px-6 md:py-20">
-          <div className="mb-6">
+          <Reveal className="mb-6">
             <p className="font-body text-sm font-semibold text-heritage-600">Directory</p>
             <Heading level={2} id="heritage-sites-heading" className="mt-2">
               Featured heritage sites
             </Heading>
-          </div>
+          </Reveal>
           <HeritageGrid sites={heritageSites} />
         </div>
       </section>

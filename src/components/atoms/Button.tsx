@@ -30,7 +30,7 @@ const variantStyles: Record<Variant, string> = {
 
 const baseStyles =
   "inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 " +
-  "text-sm font-semibold font-body transition-colors duration-150 " +
+  "text-sm font-semibold font-body transition duration-200 ease-out hover:-translate-y-0.5 active:scale-[0.97] " +
   "min-h-[44px] min-w-[44px] " + // WCAG 2.5.5 touch target size
   "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 " +
   "disabled:opacity-50 disabled:pointer-events-none";

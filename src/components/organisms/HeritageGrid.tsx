@@ -52,7 +52,7 @@ export default function HeritageGrid({ sites }: HeritageGridProps) {
       {filtered.length > 0 ? (
         <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((site, index) => (
-            <HeritageCard key={site.slug} site={site} priority={index === 0} />
+            <HeritageCard key={site.slug} site={site} priority={index === 0} index={index} />
           ))}
         </ul>
       ) : (
