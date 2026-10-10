@@ -6,7 +6,7 @@ import { heritageSites } from "@/data/heritage-sites";
 
 const stats = [
   { label: "Heritage sites featured", value: `${heritageSites.length}` },
-  { label: "Coastal & inland towns", value: "5" },
+  { label: "Coastal & inland towns", value: "4" },
   { label: "Province", value: "Pangasinan" },
 ];
 
@@ -26,9 +26,11 @@ export default function Home() {
             A guide to the province&apos;s most iconic sites — built to load fast on
             any connection, work well on a phone, and stay easy to update.
           </Text>
-          <div className="mt-6 flex justify-center gap-3">
-            <Button href="#heritage-sites">Explore heritage sites</Button>
-            <Button href="#about" variant="secondary">
+          <div className="mt-6 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-center">
+            <Button href="#heritage-sites" className="w-full sm:w-auto">
+              Explore heritage sites
+            </Button>
+            <Button href="#about" variant="secondary" className="w-full sm:w-auto">
               About the province
             </Button>
           </div>
@@ -38,7 +40,7 @@ export default function Home() {
           {stats.map((stat) => (
             <div key={stat.label}>
               <dt className="sr-only">{stat.label}</dt>
-              <dd className="font-display text-2xl font-semibold text-heritage-700 md:text-3xl">
+              <dd className="font-display text-lg font-semibold text-heritage-700 sm:text-2xl md:text-3xl">
                 {stat.value}
               </dd>
               <dd className="mt-1 text-xs text-ink-800/70 md:text-sm">{stat.label}</dd>
@@ -73,7 +75,7 @@ export default function Home() {
             <li className="flex gap-3 rounded-2xl bg-sand-50 p-4">
               <Icon name="map-pin" className="mt-1 shrink-0 text-heritage-600" />
               <div>
-                <p className="font-semibold text-ink-900">5 towns represented</p>
+                <p className="font-semibold text-ink-900">4 towns represented</p>
                 <Text muted size="sm">
                   Alaminos, Bolinao, Balungao, and Mangatarem, spanning coast to
                   foothills.
